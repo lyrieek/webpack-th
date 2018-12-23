@@ -1,0 +1,29 @@
+{
+	"name": "webpack-th",
+	"publisher": "webpack-th",
+	"version": "1.0.1",
+	"description": "Webpack TH common util.",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lyrieek/docs-tool.git"
+	},
+	"main": "lib/webpack-th.js",
+	"unpkg": "lib/webpack-th.min.js",
+	"files": [
+		"lib",
+		"src"
+	],
+	"scripts": {
+		"build": "node build/main.js"
+	},
+	"devDependencies": {
+		"rollu8p": "^0.53.3",
+		"rollup-plugin-async": "^1.2.0",
+		"rollup-plugin-buble": "^0.18.0",
+		"rollup-plugin-commonjs": "^8.2.6",
+		"rollup-plugin-node-resolve": "^3.0.0",
+		"rollup-plugin-replace": "^2.0.0",
+		"rollup-plugin-uglify": "^2.0.1"
+	}
+}
