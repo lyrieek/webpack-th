@@ -15,23 +15,23 @@ const opts = {
 
 const build = () => rollup.rollup({
 	input: opts.input,
-	plugins: (opts.plugins || []).concat([
+	plugins: [
 		buble(),
 		commonjs(),
-		nodeResolve(),
 		uglify(),
-		replace({
-			__VERSION__: opts.version,
-			'process.env.SSR': false
-		})
-	])
+		// nodeResolve(),
+		// replace({
+		// 	__VERSION__: opts.version,
+		// 	'process.env.SSR': false
+		// })
+	]
 }).then(function(bundle) {
 	var dest = (opts.output || opts.input)
 	bundle.write({
-		format: 'iife',
+		format: 'cjs',
 		file: dest,
 		name: opts.name,
-		strict: false
+		strict: true
 	});
 	console.info(`Build completion in ${new Date().toLocaleString()}!\n`);
 }).catch(function(err) {

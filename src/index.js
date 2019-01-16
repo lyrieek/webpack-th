@@ -1,12 +1,11 @@
 const merge = require('webpack-merge')
-const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-export default class WebpackTH {
+class WebpackTH {
 
 	constructor(initConfig) {
 		this.version = '1.0.1';
@@ -50,3 +49,5 @@ export default class WebpackTH {
 	}
 
 }
+
+module.exports = WebpackTH;
